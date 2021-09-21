@@ -1,6 +1,6 @@
 clearvars
 % rand('state' ,0')
-goal = 'eitin';
+goal = 'eiti';
 size_goal = size(goal,2);
 inputs = 'qwertyuiopasdfghjklzxcvbnm ';
 random_generations = 3000000;
