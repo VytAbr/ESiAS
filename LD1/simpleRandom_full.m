@@ -1,6 +1,6 @@
 clearvars
 % rand('state' ,0')
-goal = 'eiti';
+goal = 'eitin';
 size_goal = size(goal,2);
 inputs = 'qwertyuiopasdfghjklzxcvbnm ';
 random_generations = 3000000;
@@ -28,7 +28,7 @@ toc
 %% Kodas, kuris kartoja virsuje esanti skript'a N kartu ir skaiciuoja vidutini laika
 
 % repeat experiment 10-20 times. Calculate average time
-IwantToGetAverageTime = 1;
+IwantToGetAverageTime = 0;
 if IwantToGetAverageTime
     
     repeatN = 10; % nustatom kiek kartu suksim cikla. Pagal pc resursus
