@@ -2,7 +2,7 @@ clearvars
 % rand('state' ,0')
 goal = 'eiti';
 size_goal = size(goal,2);
-inputs = 'qwertyuiopasdfghjklzxcvbnm ';
+zodynas = 'qwertyuiopasdfghjklzxcvbnm ';
 random_generations = 3000000;
 % approx. random guesses needed: 1/27 ^ 4
 % size(inputs)^size(goal)
@@ -10,9 +10,9 @@ random_generations = 3000000;
 tic
 for i=1:random_generations
     %     generuojam atsitikritai 4 skaicius, aibeje iki 'inputs'
-    chosen_i = randi(size(inputs,2),1,size_goal);
+    chosen_i = randi(size(zodynas,2),1,size_goal);
     %     palyginam juos su tikslu. Imam is zodyno, pagal sugeneruotus indeksus "chosen_i"
-    match_i = strcmp(goal,inputs(chosen_i));
+    match_i = strcmp(goal,zodynas(chosen_i));
     %     match condition. Look for next letter
     if match_i
         disp('good');
@@ -36,8 +36,8 @@ if IwantToGetAverageTime
     for ir=1:repeatN
         
         for i=1:random_generations
-            chosen_i = randi(size(inputs,2),1,size_goal);
-            match_i = strcmp(goal,inputs(chosen_i));
+            chosen_i = randi(size(zodynas,2),1,size_goal);
+            match_i = strcmp(goal,zodynas(chosen_i));
             %     match condition. Look for next letter
             if match_i
                 disp(['good' num2str(ir)]);
